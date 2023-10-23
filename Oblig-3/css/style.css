@@ -1,0 +1,141 @@
+body, html{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100VH;
+    background: linear-gradient(to bottom right, darkgrey, blue);
+    transition: 0.5s;
+}
+.page{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.5fr 1fr  0.2fr;
+    grid-template-areas: 
+    "header header header header"
+    "navbar navbar navbar navbar"
+    "main main main main"
+    "section1 section2 section3 section4"
+    "footer footer footer footer";
+    gap: 20px;
+    height: 100%;
+    animation: fadeIn 1s ease in out;
+}
+nav, main, #section1, #section2, #section3, #section4, header{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+nav:hover, main:hover, #section1:hover, #section2:hover, #section3:hover, #section4:hover, header:hover{
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+header{
+    grid-area: header;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    background: linear-gradient(to bottom right, yellow, green);
+    transition: 0.5s;
+}
+nav{
+    grid-area: navbar;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    background-color: rgb(145, 211, 39);
+}
+main{
+    grid-area: main;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom right, rgb(184, 4, 4), rgb(65, 58, 58));
+}
+#section1{
+    grid-area: section1;
+    padding: 20px;
+    background-color: #e74;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#section2{
+    grid-area: section2;
+    padding: 20px;
+    background-color: #9b59b6;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#section3{
+    grid-area: section3;
+    padding: 20px;
+    background-color: #f39c23;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#section4{
+    grid-area: section4;
+    padding: 20px;
+    background-color: #555;
+    font-size: 30px;
+    font-weight: bolder;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ccc;
+    font-size: 30px;
+    font-weight: bolder;
+}
+@media(max-width: 706px){
+    .page{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "main main"
+        "section1 section2"
+        "section3 section4"
+        "footer footer";
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    } to{
+        opacity: 2;
+    }
+    
+}
+
+img{
+    height: 100px;
+    width: 150px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    font-size: 25px;
+}
+p{
+    font-size: 15px;
+}
+input{
+    height: 50px;
+    width: 200px;
+}
